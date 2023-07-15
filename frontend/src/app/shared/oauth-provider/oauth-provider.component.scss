@@ -1,0 +1,20 @@
+.oauth-provider {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--neutral40);
+  border-radius: 8px;
+  margin: var(--space-xs) 0;
+  padding: var(--space-xs) var(--space-unit);
+  color: var(--neutral100);
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+
+  &:hover {
+    background: var(--neutral20);
+  }
+  div {
+    flex: 1;
+    text-align: center;
+  }
+}

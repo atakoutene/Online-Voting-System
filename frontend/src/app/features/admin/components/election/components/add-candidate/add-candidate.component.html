@@ -1,0 +1,62 @@
+<section class="add-candidate">
+  <h2>Add Candidate</h2>
+  <p>Enter the informations of the new candidate.</p>
+  <form class="form" [formGroup]="addCandidateForm" (submit)="onSubmit()">
+    <label for="profilePhoto" class="profilePhoto">
+      <input
+        type="file"
+        style="display: none"
+        id="profilePhoto"
+        #imageInput
+        accept="image/*"
+        (change)="processFile(imageInput)"
+        formControlName="candidatePicture"
+      />
+      <img src="assets/icons/camera.png" alt="" #cameraPlaceholder />
+      <img
+        class="img-preview-container"
+        #imgPreview
+        *ngIf="selectedFile"
+        [src]="selectedFile.src"
+      />
+    </label>
+    <app-input-box
+      label="Name"
+      name="name"
+      placeholder="Enter the Candidate's name"
+      formControlName="name"
+    ></app-input-box>
+    <app-input-box
+      label="Email"
+      name="email"
+      placeholder="Ex: testuser@gmail.com,..."
+      type="email"
+      formControlName="email"
+    ></app-input-box>
+    <app-input-box
+      label="Phone"
+      name="phone"
+      placeholder="Format: +99999999"
+      type="text"
+      formControlName="phone"
+    ></app-input-box>
+    <app-input-box
+      label="Candidate ID"
+      name="candidateID"
+      placeholder="Unique ID to login"
+      type="text"
+      formControlName="candidateID"
+    ></app-input-box>
+    <app-input-box
+      label="Candidate key"
+      name="candidateKey"
+      placeholder="Unique key to login"
+      type="text"
+      formControlName="candidateKey"
+    ></app-input-box>
+
+    <div class="btn__ctr">
+      <app-button text="Create Candidate"></app-button>
+    </div>
+  </form>
+</section>

@@ -1,0 +1,10 @@
+<div class="oauth-provider" *ngIf="provider == 'Google'; else fb">
+  <img src="assets/icons/google__icon.png" alt="" />
+  <div class="body--sm">Signup with Google</div>
+</div>
+<ng-template #fb>
+  <div class="oauth-provider">
+    <img src="assets/icons/fb__icon.png" alt="" />
+    <div class="body--sm">Signup with Google</div>
+  </div>
+</ng-template>

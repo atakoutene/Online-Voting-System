@@ -1,0 +1,17 @@
+.add-enroller {
+  form.form {
+    margin-top: var(--space-xl);
+    height: 100%;
+
+    .btn__ctr {
+      margin-top: var(--space-xxl);
+
+      div {
+        font-size: var(--text-sm);
+        margin-top: var(--space-xs);
+        text-align: center;
+      }
+    }
+  }
+  padding: 1rem 1.5rem;
+}

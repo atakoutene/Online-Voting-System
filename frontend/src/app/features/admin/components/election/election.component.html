@@ -1,0 +1,107 @@
+<section class="election">
+  <header class="header">Election title - Building</header>
+  <div class="page-title">
+    <div class="left">
+      <h4 class="">Overview</h4>
+    </div>
+  </div>
+  <div class="content">
+    <div class="stats">
+      <div class="stat">
+        <h4 class="margin-top--md margin-bottom--md">Number of participants</h4>
+        <div class="card">
+          <div class="card--header">
+            <div class="left">
+              <div class="first">
+                <span class="number text--xl">1536</span>
+                <span class="label">voters</span>
+              </div>
+              <div class="second text--sm">Total number of participants</div>
+            </div>
+          </div>
+          <div class="card--content">
+            <app-pie-chart
+              class="chart"
+              mid="chart1"
+              [config]="electionsData[0]"
+            ></app-pie-chart>
+            <ul class="legend">
+              <li class="male">Male</li>
+              <li class="female">Female</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <h4 class="margin-top--md margin-bottom--md">% of participation</h4>
+        <div class="card">
+          <div class="card--header">
+            <div class="left">
+              <div class="first">
+                <span class="number text--xl">1536</span>
+                <span class="label">voters</span>
+              </div>
+              <div class="second text--sm">Total number of participants</div>
+            </div>
+          </div>
+          <div class="card--content">
+            <app-pie-chart
+              class="chart"
+              mid="chart2"
+              [config]="electionsData[1]"
+            ></app-pie-chart>
+            <ul class="legend">
+              <li class="male">Male</li>
+              <li class="female">Female</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="candidates inline-padding">
+      <h4 class="margin-bottom--md margin-top--md">Candidates</h4>
+      <swiper slidesPerView="auto" [centeredSlides]="true" [spaceBetween]="30">
+        <ng-template swiperSlide
+          ><div
+            class="card"
+            style="background-image: 'url(assets/img/candidate.png)'"
+          >
+            <div class="right"></div>
+            <div class="left">
+              <div class="text--xs label">Yann Djoumessi</div>
+              <div class="percentage text--xxxl">32%</div>
+            </div>
+            <div class="overlay"></div></div
+        ></ng-template>
+        <ng-template swiperSlide
+          ><div
+            class="card"
+            style="background-image: 'url(assets/img/candidate.png)'"
+          >
+            <div class="right"></div>
+            <div class="left">
+              <div class="text--xs label">Yann Djoumessi</div>
+              <div class="percentage text--xxxl">32%</div>
+            </div>
+            <div class="overlay"></div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide
+          ><div
+            class="card"
+            style="background-image: 'url(assets/img/candidate.png)'"
+          >
+            <div class="right"></div>
+            <div class="left">
+              <div class="text--xs label">Yann Djoumessi</div>
+              <div class="percentage text--xxxl">32%</div>
+            </div>
+            <div class="overlay"></div>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
+</section>
+<app-navbar-mobile (click)="chooseUserType()"></app-navbar-mobile>
+<router-outlet></router-outlet>

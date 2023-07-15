@@ -1,0 +1,13 @@
+form.form {
+  margin-top: var(--space-xl);
+
+  .btn__ctr {
+    margin-top: var(--space-lg);
+
+    div {
+      font-size: var(--text-sm);
+      margin-top: var(--space-xs);
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<section class="modal-container">
+  <div class="box subtle-shadow">
+    <h4>Type of user</h4>
+    <form action="" (submit)="onSubmit()" [formGroup]="userType">
+      <div class="form-radio" for="type">
+        <label for="type" class="body--md">Enroller</label>
+        <div class="action">
+          <input
+            formControlName="type"
+            type="radio"
+            id="type"
+            name="type"
+            value="enroller"
+            :checked
+          />
+          <div class="description text--sm">
+            Those are the one in charge of registering new voters in the system.
+          </div>
+        </div>
+      </div>
+      <div class="form-radio" for="type">
+        <label for="type" class="body--md">Candidate</label>
+        <div class="action">
+          <input
+            formControlName="type"
+            type="radio"
+            name="type"
+            id="type"
+            value="candidate"
+          />
+          <div class="description text--sm">
+            Add a new contestant For your election.
+          </div>
+        </div>
+      </div>
+      <div class="btn-wrapper margin-top--xl">
+        <app-button text="Continue"></app-button>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+<div class="input {{ disabled ? 'disabled' : '' }}">
+  <label [for]="name">{{ label }}</label>
+  <input
+    #in
+    [type]="type"
+    [name]="name"
+    [id]="name"
+    required
+    (change)="onChange(in.value)"
+    (blur)="onTouched()"
+    [disabled]="disabled"
+    [value]="value"
+    [placeholder]="placeholder"
+  />
+</div>

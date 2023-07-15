@@ -1,0 +1,27 @@
+.inputs {
+  margin-top: var(--space-xl);
+}
+
+.close {
+  width: 24px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: var(--neutral40);
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+
+  path {
+    fill: var(--neutral200);
+  }
+
+  &:hover {
+    background-color: var(--color-primary);
+
+    path {
+      fill: white;
+    }
+  }
+}

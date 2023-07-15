@@ -1,0 +1,50 @@
+<div class="dashboard">
+  <header class="head">
+    <div class="wrapper">
+      <div class="left">
+        <h4>Welcome back,</h4>
+        <div class="body--md">Username</div>
+      </div>
+      <div class="right">
+        <div class="profile"></div>
+      </div>
+    </div>
+
+    <div class="page-title full-bleed--white">
+      <div class="left">
+        <div><img src="assets/icons/dashboard.png" alt="" /></div>
+        <span>Dashboard</span>
+      </div>
+      <app-button
+        text="New Election"
+        icon="plus"
+        (click)="createElection()"
+      ></app-button>
+    </div>
+  </header>
+
+  <div class="sessions margin-top--lg">
+    <a
+      [routerLink]="['./election', sess.id]"
+      *ngFor="let sess of sessions$ | async"
+    >
+      <div class="session">
+        <div class="head flex sb">
+          <span>Title</span>
+          <span>Start Date</span>
+        </div>
+        <div class="infos flex sb">
+          <span>{{ sess.title }}</span>
+          <span>{{ sess.start_date | date }}</span>
+        </div>
+        <div class="flex sb vc"></div>
+        <div class="status margin-top--sm text--sm">
+          {{ sess.published ? "Completed" : "Pending" }}
+          <div class="actions flex sb vc"></div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="spinner" *ngIf="!(sessions$ | async)"></div>
+</div>

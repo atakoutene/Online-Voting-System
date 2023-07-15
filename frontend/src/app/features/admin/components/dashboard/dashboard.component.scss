@@ -1,0 +1,100 @@
+.dashboard {
+  min-height: 100vh;
+  padding: 1rem 1.5rem;
+  background-color: var(--neutral10);
+  header.head {
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .profile {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background-color: var(--neutral20);
+    }
+    .page-title {
+      margin-top: var(--space-unit);
+      background: var(--neutral00);
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .left {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xxs);
+
+        div {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      span {
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--neutral900);
+      }
+    }
+  }
+  a {
+    .session {
+      background: var(--neutral00);
+      padding: var(--space-md) var(--space-md);
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: var(--space-unit);
+      border: 0.125px solid var(--neutral30);
+
+      .head {
+        color: var(--neutral900);
+
+        border-bottom: 1px solid var(--neutral30);
+        padding: 0 0 var(--space-unit);
+        margin-bottom: var(--space-unit);
+
+        span {
+          color: var(--neutral200);
+        }
+      }
+
+      .infos {
+        color: var(--neutral400);
+      }
+
+      .status {
+        padding: var(--space-xxs) var(--space-unit);
+        background: var(--neutral40);
+        width: fit-content;
+        color: var(--neutral400);
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+.spinner {
+  $spinner-size: 40px;
+  width: $spinner-size;
+  height: $spinner-size;
+  border: 4px solid transparent;
+  border-top: 4px solid var(--neutral400);
+  border-radius: 50%;
+  animation: rotate 500ms linear infinite;
+  position: fixed;
+  top: 50%;
+  left: calc(50% - $spinner-size);
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

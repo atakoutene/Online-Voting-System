@@ -1,0 +1,18 @@
+.splash-screen {
+  background-color: var(--color-primary);
+  height: 100vh;
+
+  .container {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    color: white;
+
+    div {
+      font-family: "ff neuwelt";
+      font-style: italic;
+      font-weight: 900;
+      font-size: 64px;
+    }
+  }
+}

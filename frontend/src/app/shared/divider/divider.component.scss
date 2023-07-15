@@ -1,0 +1,23 @@
+.divider {
+  text-align: center;
+  position: relative;
+  color: var(--neutral40);
+  margin: var(--space-md) 0;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 45%;
+    height: 1px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: var(--neutral40);
+  }
+
+  &::before {
+    left: unset;
+    right: 0;
+  }
+}

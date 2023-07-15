@@ -1,0 +1,51 @@
+:host.last .input {
+  margin-bottom: 0 !important;
+}
+
+.input {
+  background: var(--neutral10);
+  padding: var(--space-unit);
+  border-top: {
+    left-radius: 4px;
+    right-radius: 4px;
+  }
+  position: relative;
+  border-bottom: 2px solid var(--neutral40);
+  transition: var(--transition);
+
+  &:focus-within {
+    border-bottom: 2px solid var(--color-primary);
+
+    label {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+  }
+
+  label {
+    position: absolute;
+    top: calc(-1.25 * var(--space-md));
+    left: 0;
+    font-size: var(--text-sm);
+    color: var(--neutral70);
+  }
+
+  input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+
+    &::placeholder {
+      color: var(--neutral60);
+    }
+  }
+}
+
+.input {
+  margin-bottom: var(--space-lg);
+
+  &.last {
+    margin-bottom: 0 !important;
+  }
+}

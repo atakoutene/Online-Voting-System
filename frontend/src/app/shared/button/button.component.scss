@@ -1,0 +1,33 @@
+.btn {
+  --space-unit: 16px;
+  font: var(--font-primary);
+  background: linear-gradient(to left, var(--purple600), var(--purple400));
+  border-radius: 4px;
+  border: none;
+  color: white;
+  padding: var(--space-unit) var(--space-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+
+  i {
+    width: 16px;
+    height: 16px;
+    display: grid;
+    place-items: center;
+  }
+
+  &:hover {
+    background: linear-gradient(to right, var(--purple400), var(--purple400));
+  }
+
+  &.btn-full {
+    width: 100%;
+
+    div {
+      flex: 1;
+    }
+  }
+}

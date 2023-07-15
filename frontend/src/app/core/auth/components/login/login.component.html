@@ -1,0 +1,34 @@
+<h2>Welcome Back</h2>
+<p>We are happy to see here again. Enter your email address and password.</p>
+<form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <app-input-box
+    label="Email"
+    name="email"
+    placeholder="Ex: testuser@gmail.com,..."
+    type="email"
+    formControlName="email"
+  ></app-input-box>
+  <app-input-box
+    class="last"
+    label="Password"
+    name="password"
+    placeholder="MysupercomplicatedPasSwORD1235"
+    type="password"
+    formControlName="password"
+  ></app-input-box>
+  <a routerLink="../forgot-password" class="forgot-password"
+    >Forgot password?</a
+  >
+
+  <app-divider></app-divider>
+
+  <app-oauth-provider provider="Google"></app-oauth-provider>
+  <app-oauth-provider provider="Fb"></app-oauth-provider>
+
+  <div class="btn__ctr">
+    <app-button text="Login"></app-button>
+    <div class="text--sm">
+      Don't have an account ? <a routerLink="">Signup</a>
+    </div>
+  </div>
+</form>

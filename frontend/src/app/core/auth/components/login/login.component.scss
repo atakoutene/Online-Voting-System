@@ -1,0 +1,26 @@
+form.form {
+  margin-top: var(--space-xl);
+
+  a.forgot-password {
+    display: block;
+    text-align: right;
+    color: var(--color-primary);
+    font-size: var(--text-sm);
+    margin-top: var(--space-xs);
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .btn__ctr {
+    margin-top: var(--space-lg);
+
+    div {
+      font-size: var(--text-sm);
+      margin-top: var(--space-xs);
+      text-align: center;
+    }
+  }
+}

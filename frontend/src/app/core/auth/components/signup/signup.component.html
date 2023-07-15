@@ -1,0 +1,43 @@
+<h2>Create an account</h2>
+<p>Create an account, it takes less than a minute. Enter your credentials.</p>
+<form class="form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <app-input-box
+    label="Username"
+    name="username"
+    placeholder="Myusername67, Testuser..."
+    formControlName="username"
+  ></app-input-box>
+  <app-input-box
+    label="Email"
+    name="email"
+    placeholder="Ex: testuser@gmail.com,..."
+    type="email"
+    formControlName="email"
+  ></app-input-box>
+  <app-input-box
+    label="Password"
+    name="password"
+    placeholder="MysupercomplicatedPasSwORD1235"
+    type="password"
+    formControlName="password"
+  ></app-input-box>
+  <app-input-box
+    label="Confirm Password"
+    name="confirmPassword"
+    placeholder="Confirm your password"
+    type="password"
+    formControlName="confirmPassword"
+  ></app-input-box>
+
+  <app-divider></app-divider>
+
+  <app-oauth-provider provider="Google"></app-oauth-provider>
+  <app-oauth-provider provider="Fb"></app-oauth-provider>
+
+  <div class="btn__ctr">
+    <app-button text="Signup"></app-button>
+    <div class="text--sm">
+      Already have an account ? <a routerLink="login">Login</a>
+    </div>
+  </div>
+</form>

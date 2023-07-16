@@ -1,4 +1,4 @@
-package com.pacha.onlinevotingsystem.service.utils;
+package com.pacha.onlinevotingsystem.utils;
 
 import java.io.ByteArrayOutputStream;
 import java.util.zip.Deflater;
